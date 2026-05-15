@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sinf extends Model
 {
-    //
+    public function student(){
+        return $this->belongsToMany(Student::class);
+    }
 }
