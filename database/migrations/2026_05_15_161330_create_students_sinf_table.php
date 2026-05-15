@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('students_sinf', function (Blueprint $table) {
             $table->id();
             $table->foreignId('student_id')->constrained('students','id');
-            $table->foreignId('sinf_id')->constrained('sinf','id');
+            $table->foreignId('sinf_id')->constrained('sinfs','id');
             $table->timestamps();
         });
     }
