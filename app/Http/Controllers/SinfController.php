@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Sinf;
 use Illuminate\Http\Request;
 
 class SinfController extends Controller
@@ -11,7 +12,10 @@ class SinfController extends Controller
      */
     public function index()
     {
-        //
+        $data = Sinf::all();
+        return response()->json([
+            'data'=>$data,
+        ]);
     }
 
     /**
